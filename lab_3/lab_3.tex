@@ -1,0 +1,198 @@
+\documentclass[a4paper,12pt]{report}
+
+\usepackage{cmap}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage{sidecap}
+\usepackage{wrapfig}
+
+
+\begin{document} 
+
+\begin{titlepage} 
+
+\begin{center} 
+
+\large Федеральное государственное автономное образовательное учреждение высшего образования «Санкт-Петербургский государственный электротехнический университет «ЛЭТИ» им. В.И. Ульянова (Ленина)»
+	
+кафедра теоретических основ электротехники\\[5cm] 
+
+\huge ОТЧЕТ\\ по лабораторной работе № 3\\[0.5cm] 
+\large <<ИССЛЕДОВАНИЕ СВОБОДНЫХ ПРОЦЕССОВ В ЭЛЕКТРИЧЕСКИХ ЦЕПЯХ>>\\[3.7cm]
+
+\begin{minipage}{1\textwidth} 
+    \begin{flushleft} 
+        \emph{Авторы:} Стукен В.А. , Зиновьев М.Д\\
+        \emph{Группа:} 2307\\
+        \emph{Факультет:} ФКТИ\\
+        \emph{Преподаватель:} Зубарев А.В
+    \end{flushleft} 
+\end{minipage} 
+
+\vfill 
+
+Санкт-Петербург, 2024\\
+{\large \LaTeX} 
+
+\end{center} 
+
+\thispagestyle{empty} 
+\end{titlepage} 
+
+\section*{Экспериментальные исследования}
+
+\begin{flushleft}
+    \item\subsection*{Опыт №1 Исследование свободных процессов в цепи первого порядка}
+    \item \begin{figure}[h!]
+        \includegraphics[width=0.5\textwidth]{image.png}
+        \label{ris:image1}
+    \end{figure}
+
+     \begin{figure}[h!]
+      \includegraphics[width=1\textwidth]{graph1.jpg}
+      \label{ris:image2}
+  \end{figure}
+
+  \subparagraph*{Вопрос №1 Осцилографируемый процесс описывается формулой:}
+  \[ u(t) = Ae^{p_1t} = Ae^{-at} = Ae^{-t/\tau} \]
+  \subparagraph*{Вопрос №2 Собственная частота определяется по формуле:}
+  \[ p_1 = - \alpha = -\frac{1}{\tau} = -10000\]
+  Что соответсвует теоретическому расчету:
+  \[ \alpha = - \frac{1}{RC} = \frac{1}{(5\cdot 10^{3})\cdot (0.02\cdot 10^{-6})} = -10000 \]
+
+    \newpage
+
+	\item\subsection*{Опыт №2  Исследование свободного процесса в цепи второго порядка}
+	\item
+  \begin{figure}[h!]
+    \includegraphics[width=0.5\textwidth]{image2.png}
+    \label{ris:image3}
+\end{figure}
+
+  
+\subparagraph*{Найдем собственные частоты при $R_1$ = 0.5 $k\Omega$}
+\begin{figure}[h!]
+  \includegraphics[width=1\textwidth]{graph2.jpg}
+  \label{ris:image4}
+\end{figure}
+\[ \alpha = \frac{R_1}{2L} = \frac{0.5\cdot 10^3}{2\cdot 25\cdot 10^{-3}} = 10000 \]
+\[ \omega_0 = \frac{1}{\sqrt{LC}} = \frac{1}{\sqrt{25\cdot 10^{-3}\cdot 0.02\cdot 10^{-6}}} = 44271 \]
+\[ \omega = \sqrt{\omega_0^2 - \alpha^2} = j\cdot 43589 \]
+\[ p_{1,2} = -\alpha \pm \sqrt{\omega_0^2 - \alpha^2} = -10000 \pm j\cdot 43589 \]
+\newpage
+\subparagraph*{Найдем собственные частоты при $R_2$ = 3 $k\Omega$}
+\begin{figure}[h!]
+  \includegraphics[width=1\textwidth]{graph3.jpg}
+  \label{ris:image5}
+\end{figure}
+\[ \alpha = \frac{R_2}{2L} = \frac{3\cdot 10^3}{2\cdot 25\cdot 10^{-3}} = 60000 \]
+\[ \omega_0 = \frac{1}{\sqrt{LC}} = \frac{1}{\sqrt{25\cdot 10^{-3}\cdot 0.02\cdot 10^{-6}}} =  44721\]
+\[ \omega = \sqrt{\omega_0^2 - \alpha^2} = 40000 \]
+\[ p_{1,2} = -\alpha \pm \sqrt{\omega_0^2 - \alpha^2} = -60000 \pm  40000 \]
+
+\newpage
+\subparagraph*{Найдем собственные частоты при $R_{cr}$ = 1.8 $k\Omega$}
+\begin{figure}[h!]
+  \includegraphics[width=1\textwidth]{graph4.jpg}
+  \label{ris:image6}
+\end{figure}
+\[ \alpha = \frac{R_{cr}}{2L} = \frac{1.8\cdot 10^3}{2\cdot 25\cdot 10^{-3}} = 36000 \]
+\[ \omega_0 = \frac{1}{\sqrt{LC}} = \frac{1}{\sqrt{25\cdot 10^{-3}\cdot 0.02\cdot 10^{-6}}} = 44721 \]
+\[ \omega = \sqrt{\omega_0^2 - \alpha^2} = j \cdot 22467 \]
+\[ p_{1,2} = -\alpha \pm \sqrt{\omega_0^2 - \alpha^2} = -36000 \pm j\cdot 22467 \]
+
+\newpage
+\subparagraph*{Найдем собственные частоты при $R$ = 0 $k\Omega$}
+\begin{figure}[h!]
+  \includegraphics[width=1\textwidth]{graph5.jpg}
+  \label{ris:image7}
+\end{figure}
+\[ \alpha = \frac{R_{cr}}{2L} = \frac{0\cdot 10^3}{2\cdot 25\cdot 10^{-3}} = 0 \]
+\[ \omega_0 = \frac{1}{\sqrt{LC}} = \frac{1}{\sqrt{25\cdot 10^{-3}\cdot 0.02\cdot 10^{-6}}} = 44721 \]
+\[ \omega = \sqrt{\omega_0^2 - \alpha^2} = j \cdot 211 \]
+\[ p_{1,2} = -\alpha \pm \sqrt{\omega_0^2 - \alpha^2} = 0 \pm j\cdot 211 \]
+
+\newpage
+\subsection*{Теоретические добротности: }
+\subparagraph*{Найдем добротность контура при $R$ = 0 $\Omega$}
+\[ Q = \frac{L}{R} \cdot \omega_0 \longrightarrow \inf \]
+
+\subparagraph*{Найдем добротность контура при $R$ = 0.5 $k\Omega$}
+\[ Q = \frac{L}{R} \cdot \omega_0 = \frac{0.025}{500}\cdot 44721 = 2.24 \]
+
+\subparagraph*{Найдем добротность контура при $R$ = 1.8 $k\Omega$}
+\[ Q = \frac{L}{R} \cdot \omega_0 = \frac{0.025}{1800}\cdot 44721 = 0.62 \]
+
+\subparagraph*{Найдем добротность контура при $R$ = 3 $k\Omega$}
+\[ Q = \frac{L}{R} \cdot \omega_0 = \frac{0.025}{3000}\cdot 44721 = 0.37 \]
+  
+  \newpage
+
+  \subsection*{Вопрос 3: Графики процессов описываются выражением}
+  \[ u(t) = A_1e^{-\alpha_1 t} + A_2e^{-\alpha_2 t}\] для апереодического режима
+  \[ u(t) =  + A_2e^{-\alpha_2 t}\] для предельного апереодического режима(критического режима)
+  \[ u(t) = Ae^{-at}\cos(\omega t + \beta)\] для колебательного режима
+	
+  \subsection*{Вопрос 4.1: Расчет частоты цепи при $R$ = 0.5 $k\Omega$}
+  \[ T = \frac{4\cdot 0.1 \, ms}{3 } \approx 0.133 \, ms \]
+  \[ u_1 = 0.3 \, V \]
+  \[ u_2 = 0.1 \, V \]
+
+  \[ \alpha = \frac{\ln(u_1/u_2)}{T} = 10980 \]
+  \[ \omega_0 = \frac{2 \pi}{0.133\cdot 10^{-3}} = 47242 \]
+
+  практическое значение:
+  \[ p_{1,2} = \alpha \pm j\omega = -10980 \pm j\cdot47242\]
+  теоритическое значение:
+  \[ p_{1,2} = \alpha \pm j\omega = -10000 \pm j\cdot43589\]
+  Теоретические и практические значения очень близки друг к другу.
+
+  \subsection*{Вопрос 4.2: Расчет частоты цепи при $R_{cr}$ = 1.8 $k\Omega$}
+  
+  практическое значение:
+  \[ p_{1,2} = \alpha \pm j\omega = -40000 \pm j\cdot 20000\]
+  теоритическое значение:
+  \[ p_{1,2} = \alpha \pm j\omega = -40000 \pm j\cdot 23589\]
+  Теоретические и практические значения очень близки друг к другу.
+
+  \subsection*{Вопрос 5: Расчет частоты цепи при $R$ = 3 $k\Omega$}
+  \[ T =  0.06 \, ms \]
+  \[ u_1 = 4.5 * 0.1 \, V \]
+  \[ u_2 = 0.3 * 0.1 \, V \]
+
+  \[ \alpha = \frac{\ln(u_1/u_2)}{\Delta t} = 135000\]
+  \[ \omega_0 = \frac{2 \pi}{6\cdot 0.1\cdot 10^{-3}} = 10000 \]
+
+  практическое значение:
+  \[ p_{1,2} = -\alpha \pm \omega_0 = -135000 \pm 10000 \]
+  \[p_1 = -125000\]
+  \[ p_2 = -145000\]
+  теоритическое значение:
+  \[ p_{1,2} = -\alpha \pm j\omega = -60000 \pm 40000\]
+  \[ p_1 = -100000 \]
+  \[ p_2 = -20000 \]
+  Теоретические и практические значения далеки друг от друга, что можно объяснить погрешностью измерений и несовершенством цепи, а также помехами.
+
+  \subsection*{Вопрос №6 }
+
+\[ Q = \frac{L}{R} \cdot \omega_0 \longrightarrow \inf \]
+
+\subparagraph*{Найдем добротность контура при $R$ = 0.5 $k\Omega$}
+\[ Q = \frac{\pi}{\ln(\frac{u_1}{u_2})} = 2.85 \]
+
+\subparagraph*{Найдем добротность контура при $R$ = 3 $k\Omega$}
+\[ Q = \frac{\pi}{\ln(\frac{u_1}{u_2})\cdot 3} = 0.38 \]
+Полученные значения достаточно близки к теоретическим.
+
+
+
+\end{flushleft}
+\newpage
+
+\section*{Вывод}
+В ходе работы было проведено исследование свободных процессов в цепи первого и второго. Был произведён расчёт собственных частот цепи, а также добротность при помощи теоретического и экспериментального подхода к измерениям. В результате полученных расчётов и измерений теоретические данные кроме случая ($R = 3 \, k\Omega$) совпали с практическими.
+
+\end{document}
